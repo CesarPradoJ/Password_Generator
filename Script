@@ -1,0 +1,58 @@
+import random
+
+uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYS"
+lowercase_letters = uppercase_letters.lower()
+numbers = "0123456789"
+symbols = "!?@#$%&"
+
+option = "Invalid Choice"
+
+password = ""
+
+all = ""
+
+
+def greet(name):
+    print("Hello, " + name + ".Let's create your password!")
+
+
+greet("Cesar")
+
+upcase = input("Uppercase Y/N: ")
+if upcase == "Y":
+    all += uppercase_letters
+elif upcase == "N":
+    all += uppercase_letters
+else:
+    print(f"{option}")
+
+locase = input("Lowercase Y/N: ")
+if locase == "Y":
+    all += lowercase_letters
+elif upcase == "N":
+    all += uppercase_letters
+else:
+    print(f"{option}")
+
+nums = input("Numbers Y/N: ")
+if nums == "Y":
+    all += numbers
+elif upcase == "N":
+    all += uppercase_letters
+else:
+    print(f"{option}")
+
+syms = input("Symbols Y/N: ")
+if syms == "Y":
+    all += symbols
+elif upcase == "N":
+    all += uppercase_letters
+else:
+    print(f"{option}")
+
+lenght = 20
+amount = 1
+
+for x in range(amount):
+    password = "".join(random.sample(all, lenght))
+    print(password)
